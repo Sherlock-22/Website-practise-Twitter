@@ -1,0 +1,147 @@
+.nav-bar{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    width:260px;
+    height:100vh;
+    max-height:100%;
+    padding:20px 4px;
+    box-sizing:border-box;
+
+    position:fixed;
+}
+
+.x-logo{
+    font-size:32px;
+    color:white;
+}
+
+.nav-menu-items{
+    margin-block:0;
+    padding-inline:0;
+}
+
+.nav-list-item{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    padding: 16px 0;
+}
+
+.nav-list-item.home, .nav-list-item.notifications{
+    position:relative;
+}
+
+.nav-list-item.home::after{
+    position:absolute;
+    content:'';
+    left:20px;
+    top:8px;
+    width: 8px;
+    height: 8px;
+    background: #1DA1F2;
+    border-radius: 50%;
+}
+
+.nav-list-item.notifications::after{
+    position:absolute;
+    content:'20+';
+    font-size:12px;
+    top:12px;
+    left:-8px;
+    background-color:#1DA1F2;
+    color:white;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.nav-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.nav-list-item:nth-child(2) {
+    margin-top: 12px;
+}
+
+.fa-home, .search-nav, .fa-bell, .fa-envelope,.fa-user, .menu-nav, 
+.fa-table-list, .book-nav, .fa-suitcase, .fa-users, .fa-bolt, .x-nav {
+    font-size: 24px;
+    color: white;
+    margin-right: 24px;
+}
+
+.book-nav, .fa-suitcase{
+    margin-right:26px;
+}
+
+.fa-users{
+    font-size:20px;
+}
+
+.grok-icon{
+    width:28px;
+    padding-right:20px;
+}
+
+.nav-item-name{
+    color:white;
+    flex:1;
+    font-size:20px;
+    font-weight:500;
+}
+
+.nav-item-name-home{
+   color:white;
+    flex:1;
+    font-size:20px;
+    font-weight:900;
+}
+
+
+.post-button{
+    background-color:white;
+    flex:1;
+    font-weight:bold;
+    color:black;
+    font-size:18px;
+    padding: 16px 90px;
+    border-radius:48px;
+}
+
+.profile-stuff{
+    display:flex;
+    align-items:center;
+}
+
+.profile-picture{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:20px;
+    margin-right:12px;
+}
+
+.profile-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.username{
+    font-size:16px;
+    margin-bottom:4px;
+    font-weight:bold;
+    color:white;
+}
+
+.usertag{
+    font-size:16px;
+    color:#B0B0B0;
+}
+
+.menu-profile{
+    font-size:16px;
+    color:white;
+}
