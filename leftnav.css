@@ -1,14 +1,14 @@
 .nav-bar{
     display:flex;
+    row-gap:8px;
     flex-direction: column;
     justify-content:space-between;
+    align-items:center;
+
     width:260px;
     height:100vh;
-    max-height:100%;
-    padding:20px 4px;
+    padding:8px 4px;
     box-sizing:border-box;
-
-    position:fixed;
 }
 
 .x-logo{
@@ -109,6 +109,10 @@
     border-radius:48px;
 }
 
+.post-button i{
+    display:none;
+}
+
 .profile-stuff{
     display:flex;
     align-items:center;
@@ -144,4 +148,118 @@
 .menu-profile{
     font-size:16px;
     color:white;
+}
+
+/*Smaller display info starts here*/
+
+@media (max-width:1200px){
+    .nav-bar{
+    display:flex;
+    row-gap:8px;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+
+    width:50px;
+    height:100vh;
+    padding:4px 4px;
+    box-sizing:border-box;
+}
+
+.x-logo{
+    font-size:32px;
+    color:white;
+}
+
+.nav-menu-items{
+    margin-block:0;
+    padding-inline:0;
+}
+
+.nav-list-item{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+
+.nav-list-item.home, .nav-list-item.notifications{
+    position:relative;
+}
+
+.nav-list-item.home::after{
+    position:absolute;
+    content:'';
+    left:20px;
+    top:8px;
+    width: 8px;
+    height: 8px;
+    background: #1DA1F2;
+    border-radius: 50%;
+}
+
+.nav-list-item.notifications::after{
+    position:absolute;
+    content:'20+';
+    font-size:12px;
+    top:12px;
+    left:-8px;
+    background-color:#1DA1F2;
+    color:white;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.nav-list-item:last-child {
+    margin-bottom: 0;
+}
+
+.nav-list-item:nth-child(2) {
+    margin-top: 8px;
+}
+
+.fa-home, .search-nav, .fa-bell, .fa-envelope,.fa-user, .menu-nav, 
+.fa-table-list, .book-nav, .fa-suitcase, .fa-users, .fa-bolt, .x-nav {
+    font-size: 24px;
+    color: white;
+}
+
+.fa-users{
+    font-size:20px;
+}
+
+.grok-icon{
+    width:28px;
+    padding-right:20px;
+}
+
+.nav-item-name, .nav-item-name-home, .profile-info, .menu-profile{
+    display:none;
+}
+
+
+.post-button{
+    background-color:white;
+    width:56px;
+    height:56px;
+    flex: 0 0 auto; 
+    padding: 0;
+    background-image:url(Images/Newtweeticon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 32px 32px;
+    text-indent: -9999px;
+}
+
+.profile-stuff{
+    display:flex;
+    align-items:center;
+}
+
+.profile-picture{
+    width:40px;
+    height:40px;
+    object-fit:cover;
+    border-radius:20px;
+}
 }
